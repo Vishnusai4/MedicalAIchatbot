@@ -15,3 +15,5 @@ The flow sequence to build this pipeline:
 4. Store the embeddings into a vector database for retrievel durng query. Facebook AI similarity search vectorstore is used.
 5. Load LLM : Mistral7B
 6. Once the user inputs his query/question, use the query to extract relevant context from the vector database. Append the query and the context to the prompt templete. The prompt template is passed into an LLM to generate a response.
+
+Run the notebook DiabetesQ&Achatbot.ipynb
