@@ -10,7 +10,7 @@ This repo explores building conversational Q&A bots using large language models 
 
 The flow sequence to build this pipeline:
 1. Extract relevant pubmed article abstracts related to diabetes.
-2. Split the abstracts into chunks. Chunks help to overcome the limitatios around token_size in llm's. In this repo, **RecursiveCharacterTextSplitter** is used as it helps keep all the context required to answer the question within one chunk.
+2. Split the abstracts into chunks. Chunks help to overcome the limitatios around token_size in llm's. In this repo, **TokenTextSplitter** is used.
 3. Convert the chunks into embeddings. An open source **sentence transformer** from huggingface is used for this purpose.
 4. Store the embeddings into a vector database for retrievel durng query. **Facebook AI similarity search (FAISS)** vectorstore is used.
 5. Load LLM : **Mistral7B**
